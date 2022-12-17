@@ -5,5 +5,10 @@ function getComputerChoice(choices) {
     return computerChoice;
 }
 
+function getPlayerChoice() {
+    let playerChoice = prompt("Please enter your choice from Rock, Paper, Scissors: ");
+    return playerChoice;
+}
 
-getComputerChoice(choices);
+let PlayerChoice = getPlayerChoice();
+let computerChoice = getComputerChoice(choices);
