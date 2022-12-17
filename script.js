@@ -1,4 +1,4 @@
-let choices = ["Rock", "Paper", "Scissors"];
+const choices = ["Rock", "Paper", "Scissors"];
 
 function getComputerChoice(choices) {
     let computerChoice = choices[Math.floor(Math.random() * choices.length)].toLowerCase()
@@ -12,8 +12,8 @@ function getPlayerChoice() {
 
 // Runs the computer and player choices.
 
-let computerChoice = getComputerChoice(choices);
-let playerChoice = getPlayerChoice();
+const computerChoice = getComputerChoice(choices);
+const playerChoice = getPlayerChoice();
 
 
 // Starts a round of the game.
@@ -26,27 +26,33 @@ function playRound(playerChoice, computerChoice){
         if(computerChoice === "rock") { 
             console.log(`Tie, both of you chose ${computerChoice}.`);
         } else if (computerChoice === "paper") {
-            console.log(`You lose ${computerChoice} beats ${playerChoice}.`);
+            let computerWin = console.log(`You lose ${computerChoice} beats ${playerChoice}.`);
+            return computerWin;
         } else {
-            console.log(`You win ${playerChoice} beats ${computerChoice}.`);
+            let win = console.log(`You win ${playerChoice} beats ${computerChoice}.`);
+            return win;
         }
     break;
 
     case "paper":
         if(computerChoice === "rock") { 
-            console.log(`You win ${playerChoice} beats ${computerChoice}.`);
+            let win =console.log(`You win ${playerChoice} beats ${computerChoice}.`);
+            return win;
         } else if (computerChoice === "paper") {
             console.log(`Tie, both of you chose ${computerChoice}.`);
         } else  {
-            console.log(`You lose ${computerChoice} beats ${playerChoice}.`);
+            let computerWin = console.log(`You lose ${computerChoice} beats ${playerChoice}.`);
+            return computerWin;
         }
     break;
 
     case "scissors":
         if(computerChoice === "rock") { 
-            console.log(`You lose ${computerChoice} beats ${playerChoice}.`);
+            let computerWin = console.log(`You lose ${computerChoice} beats ${playerChoice}.`);
+            return computerWin;
         } else if (computerChoice === "paper") {
-            console.log(`You win ${playerChoice} beats ${computerChoice}.`);
+            let win = console.log(`You win ${playerChoice} beats ${computerChoice}.`);
+            return win;
         } else {
             console.log(`Tie, both of you chose ${computerChoice}.`);
         }
@@ -54,4 +60,11 @@ function playRound(playerChoice, computerChoice){
   }
 }
 
-playRound(playerChoice, computerChoice);
+function game(){
+    for(let i = 0; i <= 4; i++) {
+        getPlayerChoice();
+        playRound(playerChoice, computerChoice);
+    }
+}
+
+game();
