@@ -1,5 +1,7 @@
 const choices = ["Rock", "Paper", "Scissors"];
 
+const display = document.getElementById('greeting-display');
+
 // Runs the computer and player choices.
 let computerChoice = choices[Math.floor(Math.random() * choices.length)].toLowerCase()
 let playerChoice = prompt("Please enter your choice from Rock, Paper, Scissors: ").toLowerCase();
