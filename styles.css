@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Oleo Script", cursive;
+}
+
+img {
+    padding: 2em;
+}
+
+#title {
+    text-align: center;
+    padding-top: .5em;
+    margin-bottom: 2em;
+}
+
+#start-button {
+    padding: 1em 2em;
+    margin-bottom: 3em;
+}
+
+#scores {
+    margin-top: 2em;
+    font-size: 2rem;
+    align-items: center;
+}
+
+#greeting-display h2 {
+    padding-bottom: 1em;
+    font-size: 3rem;
+}
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 6em;
+}
